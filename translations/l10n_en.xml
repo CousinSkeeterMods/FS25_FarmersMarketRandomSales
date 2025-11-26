@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+    <text name="action_fmAdjustRates">
+        <en>Change market sale rate</en>
+    </text>
+
+    <text name="fmRandomSell_preset_conservative">
+        <en>Farm Market - Conservative</en>
+    </text>
+
+    <text name="fmRandomSell_preset_balanced">
+        <en>Farm Market - Balanced</en>
+    </text>
+
+    <text name="fmRandomSell_preset_aggressive">
+        <en>Farm Market - Aggressive</en>
+    </text>
+</l10n>

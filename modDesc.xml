@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="80">
+    <author>CousinSkeeter</author>
+    <version>1.0.0.0</version>
+
+    <title>
+        <en>Farmers Market - Random Hourly Sales</en>
+    </title>
+
+    <description>
+        <en>
+            A farmers market placeable that stores products and automatically sells random amounts
+            of all stored goods every in-game hour at current market prices.
+
+            A configurable farmers market that stores products and automatically sells a random 
+            percentage of all stored goods every in-game hour at the current map price. 
+            
+            Includes in-game configuration presets accessed at the info trigger.
+
+        </en>
+    </description>
+
+    <!-- Register script file -->
+    <extraSourceFiles>
+        <sourceFile filename="scripts/FarmersMarketRandom.lua"/>
+    </extraSourceFiles>
+
+    <!-- Custom placeable type that extends ProductionPoint with random selling logic -->
+    <placeableTypes>
+        <placeableType name="farmersMarketRandom"
+                       className="FarmersMarketRandom"
+                       filename="$moddir$/scripts/FarmersMarketRandom.lua"/>
+    </placeableTypes>
+
+    <!-- Store item entry so it appears in the build menu
+         Adjust xmlFilename path to match your actual folder structure -->
+    <storeItems>
+        <storeItem xmlFilename="$moddir$/placeables/farmersMarket/farmersMarketRandom.xml"/>
+    </storeItems>
+
+    <!-- Localization -->
+    <l10n>
+        <text filename="$moddir$/translations/l10n_en.xml"/>
+    </l10n>
+</modDesc>

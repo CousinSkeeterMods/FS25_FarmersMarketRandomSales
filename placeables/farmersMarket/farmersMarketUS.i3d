@@ -1,0 +1,755 @@
+﻿<?xml version="1.0" encoding="iso-8859-1"?>
+<i3D name="farmersMarketUS" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+    <Files>
+        <File fileId="41" filename="$data/maps/textures/shared/default_normal.png"/>
+        <File fileId="17" filename="$data/maps/textures/shared/leaksDirtDecals_diffuse.png"/>
+        <File fileId="18" filename="$data/maps/textures/shared/leaksDirtDecals_normal.png"/>
+        <File fileId="19" filename="$data/maps/textures/shared/leaksDirtDecals_specular.png"/>
+        <File fileId="9" filename="$data/maps/textures/shared/mapDirt_diffuse.png"/>
+        <File fileId="11" filename="$data/maps/textures/shared/mapRust_diffuse.png"/>
+        <File fileId="13" filename="$data/maps/textures/shared/props/icicles_diffuse.png"/>
+        <File fileId="14" filename="$data/maps/textures/shared/props/icicles_normal.png"/>
+        <File fileId="15" filename="$data/maps/textures/shared/props/icicles_specular.png"/>
+        <File fileId="21" filename="$data/maps/textures/shared/snow_diffuse.png"/>
+        <File fileId="22" filename="$data/maps/textures/shared/snow_normal.png"/>
+        <File fileId="23" filename="$data/maps/textures/shared/snow_specular.png"/>
+        <File fileId="2" filename="$data/maps/textures/shared/windowsGlass_diffuse.png"/>
+        <File fileId="3" filename="$data/maps/textures/shared/windowsGlass_normal.png"/>
+        <File fileId="4" filename="$data/maps/textures/shared/windowsGlass_specular.png"/>
+        <File fileId="46" filename="$data/objects/pallets/enokiBoxPallet/enokiBox_diffuse.png"/>
+        <File fileId="47" filename="$data/objects/pallets/enokiBoxPallet/enokiBox_normal.png"/>
+        <File fileId="48" filename="$data/objects/pallets/enokiBoxPallet/enokiBox_specular.png"/>
+        <File fileId="52" filename="$data/placeables/brandless/greenhouses/vegetables/springOnion/springonionStage02_alpha.png"/>
+        <File fileId="49" filename="$data/placeables/brandless/greenhouses/vegetables/springOnion/springonionStage02_diffuse.png"/>
+        <File fileId="51" filename="$data/placeables/brandless/greenhouses/vegetables/springOnion/springonionStage02_fmask.png"/>
+        <File fileId="50" filename="$data/placeables/brandless/greenhouses/vegetables/springOnion/springonionStage02_normal.png"/>
+        <File fileId="40" filename="$data/placeables/mapUS/farmersMarketUS/farmersMarketLogo_diffuse.png"/>
+        <File fileId="43" filename="$data/placeables/mapUS/farmersMarketUS/farmersMarketPosters_diffuse.png"/>
+        <File fileId="37" filename="$data/placeables/mapUS/farmersMarketUS/farmersMarketPropsUS_diffuse.png"/>
+        <File fileId="38" filename="$data/placeables/mapUS/farmersMarketUS/farmersMarketPropsUS_normal.png"/>
+        <File fileId="39" filename="$data/placeables/mapUS/farmersMarketUS/farmersMarketPropsUS_specular.png"/>
+        <File fileId="5" filename="$data/placeables/mapUS/farmersMarketUS/farmersMarketUS_diffuse.png"/>
+        <File fileId="12" filename="$data/placeables/mapUS/farmersMarketUS/farmersMarketUS_height.png"/>
+        <File fileId="10" filename="$data/placeables/mapUS/farmersMarketUS/farmersMarketUS_mask.png"/>
+        <File fileId="6" filename="$data/placeables/mapUS/farmersMarketUS/farmersMarketUS_normal.png"/>
+        <File fileId="7" filename="$data/placeables/mapUS/farmersMarketUS/farmersMarketUS_specular.png"/>
+        <File fileId="28" filename="$data/placeables/mapUS/shared/detailSetUSDoors_diffuse.png"/>
+        <File fileId="32" filename="$data/placeables/mapUS/shared/detailSetUSDoors_mask.png"/>
+        <File fileId="29" filename="$data/placeables/mapUS/shared/detailSetUSDoors_normal.png"/>
+        <File fileId="30" filename="$data/placeables/mapUS/shared/detailSetUSDoors_specular.png"/>
+        <File fileId="33" filename="$data/placeables/mapUS/shared/detailSetUSFrames_diffuse.png"/>
+        <File fileId="36" filename="$data/placeables/mapUS/shared/detailSetUSFrames_mask.png"/>
+        <File fileId="34" filename="$data/placeables/mapUS/shared/detailSetUSFrames_normal.png"/>
+        <File fileId="35" filename="$data/placeables/mapUS/shared/detailSetUSFrames_specular.png"/>
+        <File fileId="44" filename="$data/placeables/shared/farmersMarketFillplane_diffuse.png"/>
+        <File fileId="45" filename="$data/placeables/shared/farmersMarketFillplane_normal.png"/>
+        <File fileId="1" filename="$data/placeables/unia/farma/farma200/farma200_visual.i3d"/>
+        <File fileId="8" filename="$data/shaders/buildingShader.xml"/>
+        <File fileId="31" filename="$data/shaders/colorShader.xml"/>
+        <File fileId="20" filename="$data/shaders/decalShader.xml"/>
+        <File fileId="42" filename="$data/shaders/placeableShader.xml"/>
+        <File fileId="16" filename="$data/shaders/snowHeapShader.xml"/>
+        <File fileId="24" filename="$data/shared/sparkles_normal.png"/>
+        <File fileId="25" filename="$data/shared/warningStripes_diffuse.png"/>
+        <File fileId="26" filename="$data/shared/warningStripes_normal.png"/>
+        <File fileId="27" filename="$data/shared/warningStripes_specular.png"/>
+    </Files>
+    <Materials>
+        <Material name="lambert1" materialId="1" diffuseColor="0.5 0.5 0.5 1"/>
+        <Material name="windowsGlass_mat" materialId="5" alphaBlending="true">
+            <Texture fileId="2"/>
+            <Normalmap fileId="3"/>
+            <Glossmap fileId="4"/>
+        </Material>
+        <Material name="farmersMarketUS_mat" materialId="7" customShaderId="8" customShaderVariation="colorScale_customParallax">
+            <CustomParameter name="colorScale0" value="0.80 0.55 0.44 0.3"/>
+            <CustomParameter name="colorScale1" value="0.47 0.49 0.3 0.3"/>
+            <CustomParameter name="colorScale2" value="0.35 0.61 0.86 0.3"/>
+            <CustomParameter name="dirtMossMix" value=".64 1.0"/>
+            <CustomParameter name="dirtMossSmoothness" value="0.2 0.25"/>
+            <CustomParameter name="dirtMossTint" value="-0.11 0.04"/>
+            <Custommap name="mDirtDiffuse" fileId="9"/>
+            <Custommap name="mMaskMap" fileId="10"/>
+            <Custommap name="mMossDiffuse" fileId="11"/>
+            <Custommap name="mParallaxMap" fileId="12"/>
+            <Texture fileId="5"/>
+            <Normalmap fileId="6"/>
+            <Glossmap fileId="7"/>
+        </Material>
+        <Material name="icicles_mat" materialId="9" alphaBlending="true" customShaderId="16" customShaderVariation="icicle">
+            <Refractionmap type="planar" coeff="1" bumpScale="0.1"/>
+            <Texture fileId="13"/>
+            <Normalmap fileId="14"/>
+            <Glossmap fileId="15"/>
+        </Material>
+        <Material name="leaksDirtDecals_mat" materialId="8" alphaBlending="true" customShaderId="20">
+            <Texture fileId="17"/>
+            <Normalmap fileId="18"/>
+            <Glossmap fileId="19"/>
+        </Material>
+        <Material name="snow_mat" materialId="10" customShaderId="16">
+            <Custommap name="mSparklesNormal" fileId="24"/>
+            <Texture fileId="21"/>
+            <Normalmap fileId="22" bumpDepth="0.5"/>
+            <Glossmap fileId="23"/>
+        </Material>
+        <Material name="warningStripes_mat" materialId="6">
+            <Texture fileId="25"/>
+            <Normalmap fileId="26"/>
+            <Glossmap fileId="27"/>
+        </Material>
+        <Material name="detailSetUSDoors_mat" materialId="2" customShaderId="31" customShaderVariation="colorScale_customMask">
+            <CustomParameter name="colorScale0" value="0.2 0.03 0.03 1"/>
+            <CustomParameter name="contrastLuminiosity" value="1.0 0.25"/>
+            <Custommap name="mCustomMask" fileId="32"/>
+            <Texture fileId="28"/>
+            <Normalmap fileId="29"/>
+            <Glossmap fileId="30"/>
+        </Material>
+        <Material name="detailSetUSFrames_mat" materialId="3" customShaderId="31" customShaderVariation="colorScale_customMask">
+            <CustomParameter name="colorScale0" value="0.2 0.03 0.03 1"/>
+            <CustomParameter name="contrastLuminiosity" value="1.0 0.2"/>
+            <Custommap name="mCustomMask" fileId="36"/>
+            <Texture fileId="33"/>
+            <Normalmap fileId="34"/>
+            <Glossmap fileId="35"/>
+        </Material>
+        <Material name="farmersMarketPropsUS_mat" materialId="11">
+            <Texture fileId="37"/>
+            <Normalmap fileId="38"/>
+            <Glossmap fileId="39"/>
+        </Material>
+        <Material name="farmersMarketLogo_mat" materialId="15" specularColor="0 1 0" customShaderId="42">
+            <Texture fileId="40"/>
+            <Normalmap fileId="41"/>
+        </Material>
+        <Material name="farmersMarketPosters_mat" materialId="4" specularColor="0 1 0" customShaderId="20">
+            <Texture fileId="43"/>
+            <Normalmap fileId="41"/>
+        </Material>
+        <Material name="farmersMarketFillplane_mat" materialId="14" specularColor="0 1 0">
+            <Texture fileId="44"/>
+            <Normalmap fileId="45"/>
+        </Material>
+        <Material name="enokiBox_02_mat" materialId="12">
+            <Texture fileId="46"/>
+            <Normalmap fileId="47"/>
+            <Glossmap fileId="48"/>
+        </Material>
+        <Material name="springonionStage02_mat" materialId="13" customShaderId="42" customShaderVariation="alphaMap">
+            <CustomParameter name="snowScale" value="0"/>
+            <Custommap name="alphaMap" fileId="52"/>
+            <Texture fileId="49"/>
+            <Normalmap fileId="50"/>
+            <Glossmap fileId="51"/>
+        </Material>
+    </Materials>
+    <Shapes externalShapesFile="farmersMarketUS.i3d.shapes"/>
+    <Scene>
+        <TransformGroup name="farmersMarketUS" lockedgroup="true" collision="false" collisionFilterMask="0xfffffbff" nodeId="1">
+            <TransformGroup name="clearAreas" nodeId="2">
+                <TransformGroup name="clearAreaStart01" translation="-14 0 -15" nodeId="3">
+                    <TransformGroup name="clearAreaWidth01" translation="0 0 30" nodeId="4"/>
+                    <TransformGroup name="clearAreaHeight01" translation="35 0 0" nodeId="5"/>
+                </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="levelAreas" nodeId="6">
+                <TransformGroup name="levelAreaStart01" translation="-16 0 -17" nodeId="7">
+                    <TransformGroup name="levelAreaWidth01" translation="0 0 34" nodeId="8"/>
+                    <TransformGroup name="levelAreaHeight01" translation="37 0 0" nodeId="9"/>
+                </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="paintAreas" nodeId="10">
+                <TransformGroup name="paintAreaStart01" translation="-14 0 -15" nodeId="11">
+                    <TransformGroup name="paintAreaWidth01" translation="0 0 30" nodeId="12"/>
+                    <TransformGroup name="paintAreaHeight01" translation="35 0 0" nodeId="13"/>
+                </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="indoorAreas" nodeId="14">
+                <TransformGroup name="indoorAreaStart01" translation="-9 0 -13.5" nodeId="15">
+                    <TransformGroup name="indoorAreaWidth01" translation="0 0 27" nodeId="16"/>
+                    <TransformGroup name="indoorAreaHeight01" translation="18 0 0" nodeId="17"/>
+                </TransformGroup>
+                <TransformGroup name="indoorAreaStart02" translation="-14 0 0" nodeId="18">
+                    <TransformGroup name="indoorAreaWidth02" translation="0 0 11" nodeId="19"/>
+                    <TransformGroup name="indoorAreaHeight02" translation="6 0 0" nodeId="20"/>
+                </TransformGroup>
+                <TransformGroup name="indoorAreaStart03" translation="8 0 -3" nodeId="21">
+                    <TransformGroup name="indoorAreaWidth03" translation="0 0 15" nodeId="22"/>
+                    <TransformGroup name="indoorAreaHeight03" translation="35 0 0" nodeId="23"/>
+                </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="testAreas" nodeId="24">
+                <TransformGroup name="testAreaStart01" translation="-14 0 -15" nodeId="25">
+                    <TransformGroup name="testAreaEnd01" translation="35 11 30" nodeId="26"/>
+                </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="tipOcclusionUpdateAreas" nodeId="27">
+                <TransformGroup name="tipOcclusionUpdateAreaStart01" translation="-14 0 -15" nodeId="28">
+                    <TransformGroup name="tipOcclusionUpdateAreaEnd01" translation="35 0 30" nodeId="29"/>
+                </TransformGroup>
+            </TransformGroup>
+            <Shape name="infoTrigger" shapeId="1" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="30"/>
+            <TransformGroup name="doors" collision="false" collisionFilterMask="0xfffffbff" clipDistance="200" nodeId="31">
+                <TransformGroup name="gate01_doorLeftRot" translation="-4.71385 1.452892 12.567231" nodeId="32">
+                    <TransformGroup name="gate01_doorLeft" translation="1.186 0 0" nodeId="33">
+                        <Shape name="collision" translation="-0.776482 -0.038032 0" shapeId="3" kinematic="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="34"/>
+                    </TransformGroup>
+                </TransformGroup>
+                <TransformGroup name="gate01_doorRightRot" translation="-2.34028 1.452892 12.567231" nodeId="35">
+                    <TransformGroup name="gate01_doorRight" translation="-1.186 0 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="36">
+                        <Shape name="farmersMarketDecal1" translation="0.743274 -0.021042 0.024453" shapeId="4" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="4" clipDistance="100" nodeId="37"/>
+                        <Shape name="collision" translation="0.776482 -0.038032 0.000001" shapeId="5" kinematic="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="38"/>
+                    </TransformGroup>
+                </TransformGroup>
+                <TransformGroup name="gate02_doorLeftRot" translation="2.340284 1.452892 12.567234" nodeId="39">
+                    <TransformGroup name="gate02_doorLeft" translation="1.186 0 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="40">
+                        <Shape name="collision" translation="-0.776482 -0.038032 0" shapeId="6" kinematic="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="41"/>
+                    </TransformGroup>
+                </TransformGroup>
+                <TransformGroup name="gate02_doorRightRot" translation="4.713856 1.452892 12.567234" nodeId="42">
+                    <TransformGroup name="gate02_doorRight" translation="-1.186 0 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="43">
+                        <Shape name="farmersMarketDecal2" translation="0.817232 0.086619 0.02445" shapeId="7" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="4" clipDistance="100" nodeId="44"/>
+                        <Shape name="collision" translation="0.776482 -0.038032 0" shapeId="8" kinematic="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="45"/>
+                    </TransformGroup>
+                </TransformGroup>
+                <TransformGroup name="gate03_doorLeftRot" translation="4.713853 1.452893 -12.567239" nodeId="46">
+                    <TransformGroup name="gate03_doorLeft" translation="-1.186 0 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="47">
+                        <Shape name="farmersMarketDecal4" translation="0.704095 0.094404 -0.02611" shapeId="9" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="4" clipDistance="100" nodeId="48"/>
+                        <Shape name="collision" translation="0.776482 -0.038033 0" shapeId="10" kinematic="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="49"/>
+                    </TransformGroup>
+                </TransformGroup>
+                <TransformGroup name="gate03_doorRightRot" translation="2.340283 1.452893 -12.567239" nodeId="50">
+                    <TransformGroup name="gate03_doorRight" translation="1.186 0 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="51">
+                        <Shape name="farmersMarketDecal5" translation="-0.681399 0.086619 -0.02611" shapeId="11" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="4" clipDistance="100" nodeId="52"/>
+                        <Shape name="collision" translation="-0.776482 -0.038033 0" shapeId="12" kinematic="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="53"/>
+                    </TransformGroup>
+                </TransformGroup>
+                <TransformGroup name="gate04_doorLeftRot" translation="-2.340283 1.452893 -12.567239" nodeId="54">
+                    <TransformGroup name="gate04_doorLeft" translation="-1.186 0 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="55">
+                        <Shape name="collision" translation="0.776482 -0.038033 0" shapeId="13" kinematic="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="56"/>
+                    </TransformGroup>
+                </TransformGroup>
+                <TransformGroup name="gate04_doorRightRot" translation="-4.713853 1.452893 -12.567239" nodeId="57">
+                    <TransformGroup name="gate04_doorRight" translation="1.186 0 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="58">
+                        <Shape name="farmersMarketDecal3" translation="-0.740098 0.081973 -0.026109" shapeId="14" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="4" clipDistance="100" nodeId="59"/>
+                        <Shape name="collision" translation="-0.776482 -0.038033 0" shapeId="15" kinematic="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="60"/>
+                    </TransformGroup>
+                </TransformGroup>
+                <TransformGroup name="door01Rot" translation="0.454369 0.111567 12.482287" nodeId="61">
+                    <TransformGroup name="door01" collision="false" collisionFilterMask="0xfffffbff" nodeId="62">
+                        <TransformGroup name="door01Opener" translation="-0.866895 1.039042 -0.040234" collision="false" collisionFilterMask="0xfffffbff" nodeId="63"/>
+                        <Shape name="glass1" translation="-0.457109 1.43981 -0.040234" shapeId="16" castsShadows="true" receiveShadows="true" materialIds="5" clipDistance="300" nodeId="64"/>
+                        <Shape name="collision" translation="-0.453047 1.02282 -0.040234" shapeId="17" kinematic="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="65"/>
+                    </TransformGroup>
+                </TransformGroup>
+                <TransformGroup name="door02Rot" translation="-0.454338 0.111567 -12.482322" nodeId="66">
+                    <TransformGroup name="door02" collision="false" collisionFilterMask="0xfffffbff" nodeId="67">
+                        <TransformGroup name="door02Opener" translation="0.866895 1.039042 0.040234" collision="false" collisionFilterMask="0xfffffbff" nodeId="68"/>
+                        <Shape name="glass2" translation="0.457109 1.43981 0.040234" shapeId="18" castsShadows="true" receiveShadows="true" materialIds="5" clipDistance="300" nodeId="69"/>
+                        <Shape name="collision" translation="0.453047 1.02282 0.040234" shapeId="19" kinematic="true" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="70"/>
+                    </TransformGroup>
+                </TransformGroup>
+                <Shape name="triggerGate01" translation="-3.5 1 12.5" shapeId="20" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="71"/>
+                <Shape name="triggerGate02" translation="3.5 1 12.5" shapeId="21" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="72"/>
+                <Shape name="triggerGate03" translation="3.5 1 -12.5" shapeId="22" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="73"/>
+                <Shape name="triggerGate04" translation="-3.5 1 -12.5" shapeId="23" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="74"/>
+                <Shape name="triggerDoor01" translation="0 1 12.5" shapeId="24" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="75"/>
+                <Shape name="triggerDoor02" translation="0 1 -12.5" shapeId="25" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="76"/>
+            </TransformGroup>
+            <TransformGroup name="sellingStation" nodeId="77">
+                <TransformGroup name="sellingStationGrain" translation="7 0 0" nodeId="78">
+                    <Shape name="exactFillNodeGrain" translation="12 0.1 4" shapeId="26" static="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="79"/>
+                    <TransformGroup name="unloadTriggerMarker" translation="12 0 4" nodeId="80"/>
+                    <TransformGroup name="unloadTriggerAINode" translation="12 0 4" rotation="0 180 0" nodeId="81"/>
+                    <TransformGroup name="unloadTriggerLinkNode" translation="12 0 4" nodeId="82"/>
+                </TransformGroup>
+                <TransformGroup name="sellingStationBalesPallets" nodeId="83">
+                    <Shape name="baleTrigger" translation="-11 0 6" shapeId="27" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x40000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="84"/>
+                    <Shape name="palletTrigger" translation="-11 0 6" shapeId="28" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x10000" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="85"/>
+                    <TransformGroup name="baleTriggerAINode" translation="-11 0 6.014801" nodeId="86"/>
+                    <Shape name="warningStripes01" translation="-11.000422 0.01 5.999859" shapeId="29" castsShadows="true" receiveShadows="true" nonRenderable="true" terrainDecal="true" materialIds="6" clipDistance="200" nodeId="87"/>
+                </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="dynamicallyLoadedParts" nodeId="88">
+                <TransformGroup name="props" nodeId="89"/>
+            </TransformGroup>
+            <TransformGroup name="visuals" nodeId="90">
+                <TransformGroup name="visual_lod" lodDistance="0 120" lodBlending="false" collision="false" collisionFilterMask="0xfffffbff" clipDistance="400" nodeId="91">
+                    <TransformGroup name="LOD0" nodeId="92">
+                        <Shape name="farmersMarketUS" shapeId="30" castsShadows="true" receiveShadows="true" materialIds="7" nodeId="93"/>
+                        <Shape name="glass" translation="0.000002 4.559782 0" shapeId="31" castsShadows="true" receiveShadows="true" materialIds="5" clipDistance="300" nodeId="94"/>
+                        <Shape name="farmersMarketDecals" translation="2.844412 3.988049 -8.143192" shapeId="32" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="4" nodeId="95"/>
+                        <Shape name="decals_Dirt" shapeId="33" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="8" nodeId="96"/>
+                        <TransformGroup name="seasons" nodeId="97">
+                            <TransformGroup name="winter" nodeId="98" weatherRequiredMask="0x400">
+                                <Shape name="icicles" shapeId="34" castsShadows="true" receiveShadows="true" materialIds="9" clipDistance="300" nodeId="99"/>
+                                <Shape name="snow" shapeId="35" castsShadows="true" receiveShadows="true" materialIds="10" clipDistance="300" nodeId="100"/>
+                            </TransformGroup>
+                        </TransformGroup>
+                    </TransformGroup>
+                    <TransformGroup name="LOD1" nodeId="101">
+                        <Shape name="glass_LOD" translation="0.000002 4.559782 0.000001" rotation="0.000009 0 0" shapeId="36" castsShadows="true" receiveShadows="true" materialIds="5" nodeId="102"/>
+                        <Shape name="props_LOD" rotation="0.000009 0 0" shapeId="37" castsShadows="true" receiveShadows="true" materialIds="3,2" nodeId="103"/>
+                        <Shape name="farmersMarketUS_LOD" rotation="0.000009 0 0" shapeId="38" castsShadows="true" receiveShadows="true" materialIds="7" nodeId="104"/>
+                    </TransformGroup>
+                </TransformGroup>
+                <TransformGroup name="props" collision="false" density="0" collisionFilterMask="0xfffffbff" clipDistance="50" nodeId="105">
+                    <TransformGroup name="table01_lod" lodDistance="0 20" static="true" collisionFilterMask="0xfffffbff" nodeId="106">
+                        <Shape name="table01_lod0" nodeId="107" shapeId="39" castsShadows="true" receiveShadows="true" materialIds="11" skinBindNodeIds="108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216">
+                            <TransformGroup name="table01" translation="7.084491 0.682764 -0.636553" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="108"/>
+                            <TransformGroup name="label01" translation="7.072204 1.15385 -1.019467" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="109"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket" translation="6.611615 0.35187 -2.174337" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="110"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall" translation="6.635851 0.392909 -1.48612" rotation="0 11.162501 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="111"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall21" translation="7.375166 0.388733 -2.118625" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="112"/>
+                            <TransformGroup name="farmersMarketPropsUSBasket" translation="5.902737 0.218246 0.602465" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="113"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall" translation="7.446186 1.32127 0.255115" rotation="-0.550827 -0.656737 16.768293" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="114"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall18" translation="7.446186 1.321271 -0.30535" rotation="-0.550827 -0.656737 16.768293" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="115"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateA" translation="6.896075 0.288711 0.849845" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="116"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateA10" translation="6.894994 0.3343 -0.742674" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="117"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateB" translation="6.640143 0.3343 0.052602" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="118"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayB" translation="7.557748 1.29031 0.630676" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="119"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayB19" translation="7.557748 1.29031 0.919708" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="120"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayB20" translation="7.557748 1.29031 1.215437" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="121"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenC" translation="7.015785 1.11741 -1.824282" rotation="0 0 3.39193" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="122"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenD2" translation="7.016519 1.118706 -2.361587" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="123"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenE" translation="7.571526 1.260097 -1.023476" rotation="0 0 3.067087" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="124"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF" translation="7.224962 1.15351 -1.300067" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="125"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenG" translation="7.224143 1.153846 -1.023273" rotation="0 0 2.899516" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="126"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF22" translation="7.224962 1.15351 -0.736039" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="127"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenG18" translation="6.883432 1.049419 -1.299828" rotation="0 0 2.899516" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="128"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenG19" translation="6.885152 1.053256 -0.735805" rotation="0 0 2.899516" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="129"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF23" translation="6.884622 1.049083 -1.023052" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="130"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF24" translation="6.555642 0.953477 -1.300067" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="131"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenG20" translation="6.554824 0.953813 -1.023274" rotation="0 0 2.899516" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="132"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF25" translation="6.555642 0.953477 -0.736039" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="133"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenA" translation="6.830577 1.097381 0.335138" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="134"/>
+                        </Shape>
+                        <Shape name="table01_lod1" nodeId="135" shapeId="40" castsShadows="true" receiveShadows="true" materialIds="11" skinBindNodeIds="136 137 138 139 140 141 142 143 144 145 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 218 219 220 221 222 223 224 225 226">
+                            <TransformGroup name="table01" translation="7.084491 0.682764 -0.636553" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="136"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket" translation="6.620791 0.35187 -2.174337" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="137"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall" translation="6.635851 0.392909 -1.48612" rotation="0 11.162501 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="138"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall22" translation="7.375166 0.388733 -2.118625" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="139"/>
+                            <TransformGroup name="farmersMarketPropsUSBasket" translation="5.902737 0.218246 0.602465" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="140"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall" translation="7.446186 1.32127 0.255115" rotation="-0.550827 -0.656737 16.768293" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="141"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateA" translation="6.896075 0.288711 0.849845" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="142"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateA11" translation="6.894994 0.3343 -0.742674" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="143"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateB" translation="6.640143 0.3343 0.052602" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="144"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall19" translation="7.446186 1.321271 -0.30535" rotation="-0.550827 -0.656737 16.768293" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="145"/>
+                        </Shape>
+                    </TransformGroup>
+                    <TransformGroup name="table02_lod" lodDistance="0 20" static="true" collisionFilterMask="0xfffffbff" nodeId="146">
+                        <TransformGroup name="table02_lod0" nodeId="147">
+                            <TransformGroup name="table02" translation="7.084491 0.682764 4.8744" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="148"/>
+                            <TransformGroup name="label01" translation="6.363526 0.985339 4.307178" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="149"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall" translation="6.011456 0.209792 3.195885" rotation="0 -2.29917 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="150"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall23" translation="5.925242 0.209792 3.957668" rotation="0 135 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="151"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedLarge" translation="6.040747 0.236403 5.469926" rotation="0 8.798587 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="152"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedLarge10" translation="6.651351 0.38316 5.756243" rotation="0 -5.831255 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="153"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedLarge11" translation="6.851751 0.385293 6.452371" rotation="0 -90 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="154"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall24" translation="7.370043 0.384866 3.367436" rotation="0 -2.29917 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="155"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall25" translation="6.799668 0.38071 3.829949" rotation="0 -90 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="156"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall26" translation="6.660531 0.38071 3.33855" rotation="0 -82.708344 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="157"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall" translation="5.958279 0.550355 3.924111" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="158"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall20" translation="5.996828 0.550355 5.262336" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="159"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketBowl" translation="6.064136 0.544732 3.203134" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="160"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket" translation="6.699021 0.369957 4.43443" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="161"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket13" translation="7.30239 0.369957 5.028274" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="162"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketLarge" translation="5.984657 0.259778 4.64607" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="163"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenB" translation="7.119962 1.193149 3.867024" rotation="0 0 4.4417" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="164"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenC" translation="7.015785 1.11741 5.519086" rotation="0 0 3.39193" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="165"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF" translation="6.555642 0.953477 6.60658" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="166"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenG" translation="6.554824 0.953813 6.319351" rotation="0 0 2.899516" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="167"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF26" translation="6.555642 0.953477 6.042558" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="168"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF27" translation="6.884622 1.049083 6.319573" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="169"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenG21" translation="6.885152 1.053256 6.606819" rotation="0 0 2.899516" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="170"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenG22" translation="6.883432 1.049419 6.042796" rotation="0 0 2.899516" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="171"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF28" translation="7.224962 1.15351 6.60658" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="172"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenG23" translation="7.224143 1.153846 6.319351" rotation="0 0 2.899516" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="173"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF29" translation="7.224962 1.15351 6.042558" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="174"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenE" translation="7.571526 1.260097 6.319143" rotation="0 0 3.067087" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="175"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenD" translation="7.011751 1.1123 4.981781" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="176"/>
+                        </TransformGroup>
+                        <TransformGroup name="table02_lod1" nodeId="177">
+                            <TransformGroup name="table02" translation="7.084491 0.682764 4.8744" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="178"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall" translation="6.011456 0.209792 3.195885" rotation="0 -2.29917 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="179"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall27" translation="5.925242 0.209792 3.957668" rotation="0 135 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="180"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedLarge" translation="6.040747 0.236403 5.469926" rotation="0 8.798587 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="181"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedLarge12" translation="6.651351 0.38316 5.756243" rotation="0 -5.831255 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="182"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedLarge13" translation="6.851751 0.385293 6.452371" rotation="0 -90 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="183"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall28" translation="7.370043 0.384866 3.367436" rotation="0 -2.29917 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="184"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall29" translation="6.799668 0.38071 3.829949" rotation="0 -90 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="185"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall30" translation="6.660531 0.38071 3.33855" rotation="0 -82.708344 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="186"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall" translation="5.958279 0.550355 3.924111" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="187"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall21" translation="5.996827 0.550355 5.262335" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="188"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketBowl" translation="6.064139 0.546113 3.203134" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="189"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket" translation="6.70952 0.369957 4.43443" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="190"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket14" translation="7.312888 0.369957 5.028275" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="191"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketLarge" translation="5.984657 0.259778 4.64607" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="192"/>
+                        </TransformGroup>
+                    </TransformGroup>
+                    <TransformGroup name="table03_lod" lodDistance="0 20" static="true" collisionFilterMask="0xfffffbff" nodeId="193">
+                        <TransformGroup name="table03_lod0" nodeId="194">
+                            <TransformGroup name="table03" translation="7.250585 0.661751 9.936241" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="195"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketRound" translation="7.160046 0.798323 10.441771" rotation="0 0 28.305496" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="196"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketRound11" translation="7.160046 0.798323 11.352329" rotation="0 0 28.305496" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="197"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketTall" translation="6.365652 0.355361 7.773183" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="198"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall" translation="7.510237 1.348067 8.472954" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="199"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall22" translation="7.510237 1.348067 9.033395" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="200"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateB" translation="7.360818 1.346574 10.627035" rotation="0 90 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="201"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateA" translation="7.194709 1.346574 9.831737" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="202"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateA12" translation="7.194712 1.346574 11.424253" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="203"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayC" translation="7.21582 1.262486 8.397646" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="204"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayC17" translation="7.21582 1.262486 8.636175" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="205"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayC18" translation="7.21582 1.262486 8.875223" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="206"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayC19" translation="7.21582 1.262486 9.118009" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="207"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayC20" translation="6.992553 1.262486 9.118009" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="208"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayB" translation="6.8668 1.262826 8.400298" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="209"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayB21" translation="6.8668 1.262826 8.635849" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="210"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayB22" translation="6.8668 1.262826 8.868781" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="211"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayC21" translation="6.767792 1.262486 9.118009" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="212"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayA" translation="7.005514 0.76488 8.351497" rotation="0 0 23.92835" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="213"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayA12" translation="7.005514 0.76488 8.814598" rotation="0 0 23.92835" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="214"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayA13" translation="7.005514 0.76488 9.277073" rotation="0 0 23.92835" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="215"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayA14" translation="7.005514 0.76488 9.739547" rotation="0 0 23.92835" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="216"/>
+                        </TransformGroup>
+                        <TransformGroup name="table03_lod1" nodeId="217">
+                            <TransformGroup name="table03" translation="7.250585 0.661751 9.936241" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="218"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketRound" translation="7.160045 0.798323 10.441771" rotation="0 0 28.305496" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="219"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketRound12" translation="7.160045 0.798323 11.352329" rotation="0 0 28.305496" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="220"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketTall" translation="6.365652 0.355361 7.773183" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="221"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall" translation="7.510237 1.348067 8.472954" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="222"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall23" translation="7.510237 1.348067 9.033395" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="223"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateB" translation="7.360818 1.346574 10.627035" rotation="0 90 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="224"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateA" translation="7.194709 1.346574 9.831737" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="225"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateA13" translation="7.194712 1.346574 11.424253" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="226"/>
+                        </TransformGroup>
+                    </TransformGroup>
+                    <TransformGroup name="table04_lod" lodDistance="0 20" static="true" collisionFilterMask="0xfffffbff" nodeId="227">
+                        <Shape name="table04_lod0" nodeId="228" shapeId="41" castsShadows="true" receiveShadows="true" materialIds="11" skinBindNodeIds="229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299">
+                            <TransformGroup name="table04" translation="-0.007744 0.47387 5.509377" collision="false" collisionFilterMask="0xfffffbff" nodeId="229"/>
+                            <TransformGroup name="label01" translation="-0.392077 1.080263 4.514625" collision="false" collisionFilterMask="0xfffffbff" nodeId="230"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall" translation="-0.073744 0.464377 3.059167" rotation="0 102.672508 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="231"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall31" translation="-0.149702 0.464377 3.724001" rotation="0 5.441033 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="232"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedLarge" translation="-0.179659 0.464736 6.076285" rotation="0 0.483017 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="233"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall32" translation="0.167657 0.464736 6.833714" rotation="0 26.317013 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="234"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxOpen" translation="0.836166 0.217432 5.980216" rotation="0 14.260901 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="235"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxOpen4" translation="0.836081 0.217432 3.382203" rotation="0 166.756409 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="236"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketRound" translation="-0.053696 1.020084 7.262723" collision="false" collisionFilterMask="0xfffffbff" nodeId="237"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketTall" translation="0.786308 0.360179 7.52218" collision="false" collisionFilterMask="0xfffffbff" nodeId="238"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall" translation="0.221907 1.043069 7.979814" collision="false" collisionFilterMask="0xfffffbff" nodeId="239"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall24" translation="-0.219596 1.043069 8.088447" collision="false" collisionFilterMask="0xfffffbff" nodeId="240"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketBowl" translation="0.298432 0.404994 6.138274" collision="false" collisionFilterMask="0xfffffbff" nodeId="241"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateA" translation="0.039367 0.409294 4.689878" rotation="0 -90 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="242"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket" translation="0.188862 0.437354 7.925377" collision="false" collisionFilterMask="0xfffffbff" nodeId="243"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket15" translation="-0.175348 0.435459 7.379953" collision="false" collisionFilterMask="0xfffffbff" nodeId="244"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayB" translation="0.37181 0.968142 4.040883" rotation="0 90 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="245"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayB23" translation="0.37181 0.968142 3.63572" rotation="0 90 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="246"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayB24" translation="0.37181 0.968142 3.209582" rotation="0 90 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="247"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayC" translation="0.373415 0.967802 2.88085" rotation="0 90 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="248"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateD" translation="0.259418 0.992327 6.211493" collision="false" collisionFilterMask="0xfffffbff" nodeId="249"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateD3" translation="-0.243768 0.990685 6.211493" collision="false" collisionFilterMask="0xfffffbff" nodeId="250"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateC" translation="0.048827 0.992558 5.180353" collision="false" collisionFilterMask="0xfffffbff" nodeId="251"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateC3" translation="0.048827 0.992558 4.565367" collision="false" collisionFilterMask="0xfffffbff" nodeId="252"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenH" translation="-0.094443 1.011921 3.446786" collision="false" collisionFilterMask="0xfffffbff" nodeId="253"/>
+                            <TransformGroup name="farmersMarketPropsUSLabelB" translation="0.52154 0.789396 5.509377" rotation="180 0 164.742935" collision="false" collisionFilterMask="0xfffffbff" nodeId="254"/>
+                        </Shape>
+                        <Shape name="table04_lod1" nodeId="255" shapeId="42" castsShadows="true" receiveShadows="true" materialIds="11" skinBindNodeIds="256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322">
+                            <TransformGroup name="table04" translation="-0.007744 0.47387 5.509377" collision="false" collisionFilterMask="0xfffffbff" nodeId="256"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall" translation="-0.073744 0.464377 3.059167" rotation="0 102.672508 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="257"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall33" translation="-0.149702 0.464377 3.724001" rotation="0 5.441033 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="258"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedLarge" translation="-0.179659 0.464736 6.076285" rotation="0 0.483017 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="259"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall34" translation="0.167657 0.464736 6.833714" rotation="0 26.317013 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="260"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxOpen" translation="0.836166 0.217432 5.980216" rotation="0 14.260901 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="261"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxOpen5" translation="0.836081 0.217432 3.382203" rotation="0 166.756409 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="262"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketRound" translation="-0.053696 1.020084 7.262723" collision="false" collisionFilterMask="0xfffffbff" nodeId="263"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketTall" translation="0.786308 0.360179 7.522181" collision="false" collisionFilterMask="0xfffffbff" nodeId="264"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall" translation="0.221906 1.043069 7.979814" collision="false" collisionFilterMask="0xfffffbff" nodeId="265"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall25" translation="-0.219596 1.043069 8.088447" collision="false" collisionFilterMask="0xfffffbff" nodeId="266"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketBowl" translation="0.298436 0.406374 6.138275" collision="false" collisionFilterMask="0xfffffbff" nodeId="267"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateA" translation="0.039367 0.409294 4.689878" rotation="0 -90 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="268"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket" translation="0.198471 0.437354 7.925377" collision="false" collisionFilterMask="0xfffffbff" nodeId="269"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket16" translation="-0.165739 0.435459 7.379953" collision="false" collisionFilterMask="0xfffffbff" nodeId="270"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateD" translation="0.259418 0.992434 6.211493" collision="false" collisionFilterMask="0xfffffbff" nodeId="271"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateD4" translation="-0.243768 0.990792 6.211493" collision="false" collisionFilterMask="0xfffffbff" nodeId="272"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateC" translation="0.048827 0.992558 5.180353" collision="false" collisionFilterMask="0xfffffbff" nodeId="273"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateC4" translation="0.048827 0.992558 4.565367" collision="false" collisionFilterMask="0xfffffbff" nodeId="274"/>
+                        </Shape>
+                    </TransformGroup>
+                    <TransformGroup name="table05_lod" lodDistance="0 20" static="true" collisionFilterMask="0xfffffbff" nodeId="275">
+                        <TransformGroup name="table05_lod0" nodeId="276">
+                            <TransformGroup name="table05" translation="-0.007744 0.47387 -4.636489" collision="false" collisionFilterMask="0xfffffbff" nodeId="277"/>
+                            <TransformGroup name="label01" translation="-0.539637 0.856975 -4.636488" collision="false" collisionFilterMask="0xfffffbff" nodeId="278"/>
+                            <TransformGroup name="farmersMarketPropsUSLabelD" translation="-0.401247 0.977658 -2.028466" collision="false" collisionFilterMask="0xfffffbff" nodeId="279"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall" translation="-0.178825 0.463128 -2.888581" rotation="0 150 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="280"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall35" translation="0.197488 0.463782 -5.08275" rotation="0 189.712708 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="281"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall36" translation="-0.044556 0.463238 -7.026283" rotation="0 189.712708 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="282"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedLarge" translation="0.102473 0.465284 -4.021813" rotation="0 15.48211 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="283"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxOpen" translation="-0.727113 0.217432 -4.623218" collision="false" collisionFilterMask="0xfffffbff" nodeId="284"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall" translation="0.305195 0.408068 -2.59499" collision="false" collisionFilterMask="0xfffffbff" nodeId="285"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall26" translation="-0.186104 0.406216 -6.435817" collision="false" collisionFilterMask="0xfffffbff" nodeId="286"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateB" translation="0.000436 1.059904 -6.520321" collision="false" collisionFilterMask="0xfffffbff" nodeId="287"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateB8" translation="0.000438 1.059904 -7.166212" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="288"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateB9" translation="0.000438 1.059904 -2.592671" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="289"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket" translation="-0.761226 0.207511 -5.908806" collision="false" collisionFilterMask="0xfffffbff" nodeId="290"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket17" translation="0.176213 0.433831 -6.064293" collision="false" collisionFilterMask="0xfffffbff" nodeId="291"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket18" translation="-0.761226 0.199539 -3.331448" collision="false" collisionFilterMask="0xfffffbff" nodeId="292"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket19" translation="-0.013806 1.071265 -3.125275" collision="false" collisionFilterMask="0xfffffbff" nodeId="293"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketLarge" translation="-0.174386 0.467613 -5.560913" collision="false" collisionFilterMask="0xfffffbff" nodeId="294"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateRound" translation="-0.18839 0.452548 -2.250926" collision="false" collisionFilterMask="0xfffffbff" nodeId="295"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketSmall" translation="0.030137 1.044199 -5.766453" collision="false" collisionFilterMask="0xfffffbff" nodeId="296"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketMid" translation="0.025324 1.016391 -2.041671" collision="false" collisionFilterMask="0xfffffbff" nodeId="297"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketRound" translation="0.048806 1.021962 -3.799" collision="false" collisionFilterMask="0xfffffbff" nodeId="298"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketRound13" translation="0.048806 1.021962 -4.771517" collision="false" collisionFilterMask="0xfffffbff" nodeId="299"/>
+                        </TransformGroup>
+                        <TransformGroup name="table05_lod1" nodeId="300">
+                            <TransformGroup name="table05" translation="-0.007744 0.47387 -4.636489" collision="false" collisionFilterMask="0xfffffbff" nodeId="301"/>
+                            <TransformGroup name="farmersMarketPropsUSLabelD" translation="-0.432662 0.981183 -2.028174" collision="false" collisionFilterMask="0xfffffbff" nodeId="302"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall" translation="-0.178825 0.463128 -2.888581" rotation="0 150 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="303"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall37" translation="0.197488 0.463782 -5.08275" rotation="0 189.712708 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="304"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall38" translation="-0.044556 0.463238 -7.026283" rotation="0 189.712708 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="305"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedLarge" translation="0.102473 0.465284 -4.021813" rotation="0 15.48211 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="306"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxOpen" translation="-0.727113 0.217432 -4.623218" collision="false" collisionFilterMask="0xfffffbff" nodeId="307"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall" translation="0.305195 0.408068 -2.59499" collision="false" collisionFilterMask="0xfffffbff" nodeId="308"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall27" translation="-0.186104 0.406216 -6.435817" collision="false" collisionFilterMask="0xfffffbff" nodeId="309"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateB" translation="0.000436 1.059904 -6.520321" collision="false" collisionFilterMask="0xfffffbff" nodeId="310"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateB10" translation="0.000438 1.059904 -7.166212" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="311"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateB11" translation="0.000438 1.059904 -2.592671" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="312"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket" translation="-0.751617 0.20751 -5.908806" collision="false" collisionFilterMask="0xfffffbff" nodeId="313"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket20" translation="0.184382 0.433831 -6.064293" collision="false" collisionFilterMask="0xfffffbff" nodeId="314"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket21" translation="-0.753057 0.199539 -3.331448" collision="false" collisionFilterMask="0xfffffbff" nodeId="315"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket22" translation="-0.006701 1.071265 -3.125275" collision="false" collisionFilterMask="0xfffffbff" nodeId="316"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketLarge" translation="-0.174385 0.467613 -5.560913" collision="false" collisionFilterMask="0xfffffbff" nodeId="317"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateRound" translation="-0.18839 0.451744 -2.250926" collision="false" collisionFilterMask="0xfffffbff" nodeId="318"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketSmall" translation="0.030137 1.044199 -5.766453" collision="false" collisionFilterMask="0xfffffbff" nodeId="319"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketMid" translation="0.025324 1.016391 -2.041671" collision="false" collisionFilterMask="0xfffffbff" nodeId="320"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketRound" translation="0.048806 1.021962 -3.799" collision="false" collisionFilterMask="0xfffffbff" nodeId="321"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketRound14" translation="0.048806 1.021962 -4.771517" collision="false" collisionFilterMask="0xfffffbff" nodeId="322"/>
+                        </TransformGroup>
+                    </TransformGroup>
+                    <TransformGroup name="table06_lod" rotation="0 180 0" lodDistance="0 20" static="true" collisionFilterMask="0xfffffbff" nodeId="323">
+                        <TransformGroup name="table06_lod0" static="true" collisionFilterMask="0xfffffbff" nodeId="324">
+                            <TransformGroup name="table06" translation="6.871195 0.661751 9.799722" nodeId="325"/>
+                            <TransformGroup name="farmersMarketPropsUSLabelC1" translation="7.006141 1.368324 7.999791" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="326"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketRound" translation="6.771357 0.801154 10.305251" rotation="0 180 30" collision="false" collisionFilterMask="0xfffffbff" nodeId="327"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketRound15" translation="6.771357 0.801154 11.217916" rotation="0 180 30" collision="false" collisionFilterMask="0xfffffbff" nodeId="328"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketTall" translation="5.986262 0.355361 11.938657" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="329"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall" translation="7.226614 1.331339 8.336436" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="330"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall28" translation="7.226614 1.331339 8.896876" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="331"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateB" translation="6.981429 1.346574 10.490517" rotation="0 90 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="332"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateA" translation="6.813881 1.346574 9.698204" rotation="0 -0.305626 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="333"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateA14" translation="6.813881 1.346574 11.290722" rotation="0 -0.305626 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="334"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayC" translation="6.843657 1.268141 8.265169" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="335"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayB" translation="6.744652 1.268481 8.514397" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="336"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayB25" translation="6.744652 1.268481 8.747328" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="337"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayB26" translation="6.744657 1.268481 8.98288" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="338"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayC22" translation="6.618899 1.268141 8.265169" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="339"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayC23" translation="6.395629 1.268141 8.265169" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="340"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayC24" translation="6.395629 1.268141 8.507957" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="341"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayC25" translation="6.395629 1.268141 8.747002" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="342"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayC26" translation="6.395629 1.268141 8.985531" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="343"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayA" translation="6.66216 0.764467 8.214974" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="344"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayA15" translation="6.66216 0.764467 8.678075" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="345"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayA16" translation="6.66216 0.764467 9.141176" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="346"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayA17" translation="6.66216 0.764467 9.604277" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="347"/>
+                            <TransformGroup name="farmersMarketPropsUSLabelB" translation="6.652534 1.324464 10.503375" collision="false" collisionFilterMask="0xfffffbff" nodeId="348"/>
+                        </TransformGroup>
+                        <Shape name="table06_lod1" nodeId="349" shapeId="44" castsShadows="true" receiveShadows="true" materialIds="11" skinBindNodeIds="350 351 352 353 354 355 356 357 358 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 428 429 430 431 432 433 434 435 467 468 469 470 471 472 473 474 475 476 477">
+                            <TransformGroup name="table06" translation="6.871195 0.661751 9.799722" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="350"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketRound" translation="6.771358 0.801154 10.305251" rotation="0 180 30" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="351"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketRound16" translation="6.771358 0.801154 11.217916" rotation="0 180 30" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="352"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketTall" translation="5.986263 0.355361 11.938657" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="353"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall" translation="7.226614 1.331339 8.336436" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="354"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall29" translation="7.226614 1.331339 8.896876" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="355"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateB" translation="6.981429 1.346574 10.490517" rotation="0 90 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="356"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateA" translation="6.813881 1.346574 9.698204" rotation="0 -0.305626 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="357"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateA15" translation="6.813881 1.346574 11.290722" rotation="0 -0.305626 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="358"/>
+                        </Shape>
+                    </TransformGroup>
+                    <TransformGroup name="table07_lod" rotation="0 180 0" lodDistance="0 20" static="true" collisionFilterMask="0xfffffbff" nodeId="359">
+                        <TransformGroup name="table07_lod0" nodeId="360">
+                            <TransformGroup name="table07" translation="7.114394 0.678456 5.044648" collision="false" collisionFilterMask="0xfffffbff" nodeId="361"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedLarge" translation="6.065098 0.236403 5.637536" rotation="0 9.987456 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="362"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall" translation="5.95963 0.209792 6.683368" rotation="0 135 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="363"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall39" translation="6.039184 0.209792 4.158706" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="364"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall40" translation="7.339226 0.384866 3.465984" rotation="0 90 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="365"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall41" translation="7.374022 0.38071 4.124399" rotation="0 210 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="366"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall42" translation="6.754276 0.347455 3.598956" rotation="0 -82.749947 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="367"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedLarge14" translation="6.64041 0.38316 5.903361" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="368"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedLarge15" translation="6.890718 0.385293 6.612241" rotation="0 -90 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="369"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall" translation="6.087879 0.559542 5.89447" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="370"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall30" translation="5.99267 0.533493 6.64981" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="371"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketBowl" translation="6.098539 0.54226 4.160963" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="372"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket" translation="6.733697 0.373593 4.6052" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="373"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket23" translation="7.126251 0.372243 5.20232" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="374"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketLarge" translation="6.019053 0.255536 3.470344" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="375"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenB" translation="7.154352 1.193149 4.037271" rotation="0 0 4.4417" collision="false" collisionFilterMask="0xfffffbff" nodeId="376"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenC" translation="7.045375 1.113102 5.689333" rotation="0 0 3.39193" collision="false" collisionFilterMask="0xfffffbff" nodeId="377"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenD" translation="7.046447 1.113953 5.152029" rotation="0 0 3.156912" collision="false" collisionFilterMask="0xfffffbff" nodeId="378"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenE" translation="7.597449 1.253126 6.493799" rotation="0 0 3.067087" collision="false" collisionFilterMask="0xfffffbff" nodeId="379"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF" translation="7.250884 1.146538 6.217216" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" nodeId="380"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenG" translation="7.250063 1.146875 6.49401" rotation="0 0 2.899516" collision="false" collisionFilterMask="0xfffffbff" nodeId="381"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF30" translation="7.250884 1.146538 6.781239" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" nodeId="382"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenG24" translation="6.909353 1.042447 6.217455" rotation="0 0 2.899516" collision="false" collisionFilterMask="0xfffffbff" nodeId="383"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenG25" translation="6.911075 1.046284 6.781478" rotation="0 0 2.899516" collision="false" collisionFilterMask="0xfffffbff" nodeId="384"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF31" translation="6.910545 1.042111 6.494232" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" nodeId="385"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF32" translation="6.581563 0.946506 6.217216" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" nodeId="386"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenG26" translation="6.580746 0.946842 6.49401" rotation="0 0 2.899516" collision="false" collisionFilterMask="0xfffffbff" nodeId="387"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF33" translation="6.581563 0.946506 6.781239" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" nodeId="388"/>
+                        </TransformGroup>
+                        <TransformGroup name="table07_lod1" nodeId="389">
+                            <TransformGroup name="table07" translation="7.114394 0.678456 5.044648" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="390"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedLarge" translation="6.065098 0.236403 5.637536" rotation="0 9.987456 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="391"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall" translation="5.95963 0.209792 6.683368" rotation="0 135 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="392"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall43" translation="6.039184 0.209792 4.158706" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="393"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall44" translation="7.339226 0.384866 3.465984" rotation="0 90 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="394"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall45" translation="7.374022 0.38071 4.124399" rotation="0 210 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="395"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall46" translation="6.754276 0.347455 3.598956" rotation="0 -82.749947 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="396"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedLarge16" translation="6.64041 0.38316 5.903361" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="397"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedLarge17" translation="6.890718 0.385293 6.612241" rotation="0 -90 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="398"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall" translation="6.087879 0.559542 5.89447" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="399"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall31" translation="5.99267 0.533493 6.64981" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="400"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketBowl" translation="6.098536 0.54364 4.160963" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="401"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket" translation="6.722992 0.373593 4.6052" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="402"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket24" translation="7.115547 0.372243 5.20232" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="403"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketLarge" translation="6.019053 0.255536 3.470344" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="404"/>
+                        </TransformGroup>
+                    </TransformGroup>
+                    <TransformGroup name="table08_lod" rotation="0 180 0" lodDistance="0 20" static="true" collisionFilterMask="0xfffffbff" nodeId="405">
+                        <Shape name="table08_lod0" shapeId="43" castsShadows="true" receiveShadows="true" materialIds="11" skinBindNodeIds="325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465" nodeId="406">
+                            <TransformGroup name="table08" translation="6.871195 0.661751 -1.450202" collision="false" collisionFilterMask="0xfffffbff" nodeId="407"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedLarge" translation="5.912488 0.236403 -2.311186" rotation="0 -12.144079 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="408"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketTall" translation="5.953937 0.348937 -0.208018" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="409"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall" translation="5.941532 0.560068 -2.44957" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="410"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketBowl" translation="6.574279 0.72338 -1.031383" rotation="0 180 28.274515" collision="false" collisionFilterMask="0xfffffbff" nodeId="411"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayB" translation="6.487413 1.262825 -3.033104" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="412"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayB27" translation="6.487413 1.262825 -2.79794" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="413"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayB28" translation="6.487413 1.262825 -2.562841" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="414"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayC" translation="6.409163 1.262486 -2.327001" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="415"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayC27" translation="6.409163 1.262486 -2.088715" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="416"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayC28" translation="6.409163 1.262486 -1.850428" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="417"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayA" translation="7.026748 1.384525 -2.942997" collision="false" collisionFilterMask="0xfffffbff" nodeId="418"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayA18" translation="7.026748 1.384525 -2.453963" collision="false" collisionFilterMask="0xfffffbff" nodeId="419"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayA19" translation="7.026748 1.384525 -1.990862" collision="false" collisionFilterMask="0xfffffbff" nodeId="420"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenC" translation="6.920757 0.821248 0.011167" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="421"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenD" translation="6.92964 0.828545 -0.486731" rotation="0 0 14.738893" collision="false" collisionFilterMask="0xfffffbff" nodeId="422"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenA" translation="6.826567 0.82307 -2.34589" rotation="0 0 11.350597" collision="false" collisionFilterMask="0xfffffbff" nodeId="423"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketSmall" translation="5.953941 0.175999 -0.910396" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="424"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketRound" translation="6.794047 1.308473 -1.21818" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="425"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketRound17" translation="6.794047 1.308473 -0.233476" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="426"/>
+                        </Shape>
+                        <TransformGroup name="table08_lod1" nodeId="427">
+                            <TransformGroup name="table08" translation="6.871195 0.661751 -1.450202" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="428"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedLarge" translation="5.912488 0.236403 -2.311186" rotation="0 -12.144079 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="429"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketTall" translation="5.953937 0.348937 -0.208018" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="430"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall" translation="5.941532 0.560068 -2.44957" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="431"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketBowl" translation="6.573622 0.724594 -1.031383" rotation="0 180 28.274515" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="432"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketSmall" translation="5.953941 0.175999 -0.910396" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="433"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketRound" translation="6.794047 1.308473 -1.21818" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="434"/>
+                            <TransformGroup name="farmersMarketPropsUSBasketRound18" translation="6.794047 1.308473 -0.233476" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="435"/>
+                        </TransformGroup>
+                    </TransformGroup>
+                    <TransformGroup name="table09_lod" rotation="0 180 0" lodDistance="0 20" static="true" collisionFilterMask="0xfffffbff" nodeId="436">
+                        <TransformGroup name="table09_lod0" nodeId="437">
+                            <TransformGroup name="table09" translation="7.114394 0.678456 -7.909644" collision="false" collisionFilterMask="0xfffffbff" nodeId="438"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall" translation="7.351913 0.388602 -9.456585" rotation="0 -1.590294 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="439"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall47" translation="7.285985 0.388602 -8.779788" rotation="0 191.268539 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="440"/>
+                            <TransformGroup name="farmersMarketPropsUSBasket" translation="5.903028 0.251034 -7.469508" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="441"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateA" translation="6.922008 0.376011 -8.018744" rotation="0 -0.305626 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="442"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateA16" translation="6.922014 0.376011 -6.426226" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="443"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateB" translation="6.639482 0.376011 -7.220457" rotation="0 90 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="444"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket" translation="6.670302 0.353097 -8.671584" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" nodeId="445"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateRound" translation="6.667952 0.373538 -9.46136" collision="false" collisionFilterMask="0xfffffbff" nodeId="446"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall" translation="7.475597 1.307371 -7.576289" rotation="0 180 16.853384" collision="false" collisionFilterMask="0xfffffbff" nodeId="447"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall32" translation="7.475597 1.307371 -7.014968" rotation="0 180 16.853384" collision="false" collisionFilterMask="0xfffffbff" nodeId="448"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayB" translation="7.573757 1.281042 -6.66023" collision="false" collisionFilterMask="0xfffffbff" nodeId="449"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayB29" translation="7.573757 1.281042 -6.338201" collision="false" collisionFilterMask="0xfffffbff" nodeId="450"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGrayB30" translation="7.573757 1.281042 -6.04917" collision="false" collisionFilterMask="0xfffffbff" nodeId="451"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenC" translation="7.045383 1.113103 -9.097311" rotation="0 0 3.39193" collision="false" collisionFilterMask="0xfffffbff" nodeId="452"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenD" translation="7.046454 1.114152 -9.634617" rotation="0 0 3.156912" collision="false" collisionFilterMask="0xfffffbff" nodeId="453"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF" translation="6.581563 0.946506 -8.008608" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" nodeId="454"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenG" translation="6.580746 0.946842 -8.295836" rotation="0 0 2.899516" collision="false" collisionFilterMask="0xfffffbff" nodeId="455"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF34" translation="6.581563 0.946506 -8.572631" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" nodeId="456"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF35" translation="6.910545 1.042111 -8.295615" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" nodeId="457"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenG27" translation="6.911075 1.046284 -8.008368" rotation="0 0 2.899516" collision="false" collisionFilterMask="0xfffffbff" nodeId="458"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenG28" translation="6.909353 1.042447 -8.572392" rotation="0 0 2.899516" collision="false" collisionFilterMask="0xfffffbff" nodeId="459"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF36" translation="7.250884 1.146538 -8.008608" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" nodeId="460"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenG29" translation="7.250063 1.146875 -8.295836" rotation="0 0 2.899516" collision="false" collisionFilterMask="0xfffffbff" nodeId="461"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenF37" translation="7.250884 1.146538 -8.572631" rotation="0 0 2.225896" collision="false" collisionFilterMask="0xfffffbff" nodeId="462"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenE" translation="7.597449 1.253126 -8.29605" rotation="0 0 3.067087" collision="false" collisionFilterMask="0xfffffbff" nodeId="463"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateSetGreenA" translation="6.857865 1.093073 -6.937865" collision="false" collisionFilterMask="0xfffffbff" nodeId="464"/>
+                            <TransformGroup name="farmersMarketPropsUSLabelB" translation="7.436477 1.321299 -8.290483" collision="false" collisionFilterMask="0xfffffbff" nodeId="465"/>
+                        </TransformGroup>
+                        <TransformGroup name="table09_lod1" nodeId="466">
+                            <TransformGroup name="table09" translation="7.114394 0.678456 -7.909644" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="467"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall" translation="7.351913 0.388602 -9.456585" rotation="0 -1.590294 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="468"/>
+                            <TransformGroup name="farmersMarketPropsUSBoxClosedSmall48" translation="7.285985 0.388602 -8.779788" rotation="0 191.268539 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="469"/>
+                            <TransformGroup name="farmersMarketPropsUSBasket" translation="5.903028 0.251034 -7.469508" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="470"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateA" translation="6.922008 0.376011 -8.018744" rotation="0 -0.305626 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="471"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateA17" translation="6.922014 0.376011 -6.426226" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="472"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateB" translation="6.639482 0.376011 -7.220457" rotation="0 90 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="473"/>
+                            <TransformGroup name="farmersMarketPropsUSBucket" translation="6.660693 0.353096 -8.671585" rotation="0 180 0" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="474"/>
+                            <TransformGroup name="farmersMarketPropsUSCrateRound" translation="6.667952 0.372734 -9.46136" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="475"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall" translation="7.475597 1.307371 -7.576289" rotation="0 180 16.853384" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="476"/>
+                            <TransformGroup name="farmersMarketPropsUSBowlWoodSmall33" translation="7.475597 1.307371 -7.014968" rotation="0 180 16.853384" collision="false" collisionFilterMask="0xfffffbff" clipDistance="300" nodeId="477"/>
+                        </TransformGroup>
+                    </TransformGroup>
+                    <TransformGroup name="fillplane_enoki" static="true" collisionFilterMask="0xfffffbff" nodeId="478">
+                        <Shape name="enokiBag01_01" translation="6.972507 0.998899 -1.320036" rotation="0 5.75139 0" shapeId="45" castsShadows="true" receiveShadows="true" materialIds="12" clipDistance="40" nodeId="479"/>
+                        <Shape name="enokiBag01_02" translation="6.644275 0.898397 -1.321242" rotation="0 5.75139 0" shapeId="45" castsShadows="true" receiveShadows="true" materialIds="12" clipDistance="40" nodeId="480"/>
+                        <Shape name="enokiBag01_03" translation="6.972507 0.998899 6.582672" rotation="0 5.75139 0" shapeId="45" castsShadows="true" receiveShadows="true" materialIds="12" clipDistance="40" nodeId="481"/>
+                        <Shape name="enokiBag01_04" translation="6.972507 0.998899 6.022558" rotation="0 5.75139 0" shapeId="45" castsShadows="true" receiveShadows="true" materialIds="12" clipDistance="40" nodeId="482"/>
+                        <Shape name="enokiBag01_05" translation="7.316995 1.101432 6.582672" rotation="0 5.75139 0" shapeId="45" castsShadows="true" receiveShadows="true" materialIds="12" clipDistance="40" nodeId="483"/>
+                        <Shape name="enokiBag01_06" translation="-7.352762 1.102436 8.305122" rotation="0 180 0" shapeId="45" castsShadows="true" receiveShadows="true" materialIds="12" clipDistance="40" nodeId="484"/>
+                        <Shape name="enokiBag01_07" translation="-7.352762 1.102436 8.022133" rotation="0 180 0" shapeId="45" castsShadows="true" receiveShadows="true" materialIds="12" clipDistance="40" nodeId="485"/>
+                        <Shape name="enokiBag01_08" translation="-6.668845 0.890674 8.583851" rotation="0 180 0" shapeId="45" castsShadows="true" receiveShadows="true" materialIds="12" clipDistance="40" nodeId="486"/>
+                        <Shape name="enokiBag01_09" translation="-7.33821 1.089414 -6.203772" rotation="0 180 0" shapeId="45" castsShadows="true" receiveShadows="true" materialIds="12" clipDistance="40" nodeId="487"/>
+                        <Shape name="enokiBag02_01" translation="7.316995 1.229476 8.630842" rotation="0 5.75139 0" shapeId="46" castsShadows="true" receiveShadows="true" materialIds="12" clipDistance="40" nodeId="488"/>
+                        <Shape name="enokiBag02_02" translation="7.316995 1.229476 8.87144" rotation="0 5.75139 0" shapeId="46" castsShadows="true" receiveShadows="true" materialIds="12" clipDistance="40" nodeId="489"/>
+                        <Shape name="enokiBag02_03" translation="-6.466044 1.220965 2.385831" rotation="0 227.421494 0" shapeId="46" castsShadows="true" receiveShadows="true" materialIds="12" clipDistance="40" nodeId="490"/>
+                        <Shape name="enokiBag02_04" translation="-6.456817 1.226619 -8.44922" rotation="0 227.421494 0" shapeId="46" castsShadows="true" receiveShadows="true" materialIds="12" clipDistance="40" nodeId="491"/>
+                        <Shape name="enokiBag02_05" translation="-6.311558 1.226619 -8.769095" rotation="0 378.438263 0" shapeId="46" castsShadows="true" receiveShadows="true" materialIds="12" clipDistance="40" nodeId="492"/>
+                        <Shape name="enokiBag03_01" translation="0.351538 0.930971 3.209853" shapeId="47" castsShadows="true" receiveShadows="true" materialIds="12" clipDistance="40" nodeId="493"/>
+                    </TransformGroup>
+                    <TransformGroup name="fillplane_springOnion" nodeId="494">
+                        <TransformGroup name="LOD0" rotation="90 0 0" static="true" collisionFilterMask="0xfffffbff" nodeId="495">
+                            <Shape name="springOnion01" translation="7.451319 -1.056326 -1.258701" rotation="90 -160.561813 0" shapeId="48" castsShadows="true" receiveShadows="true" doubleSided="true" materialIds="13" clipDistance="25" nodeId="496"/>
+                            <Shape name="springOnion02" translation="7.57884 0.515439 -1.327603" rotation="68.985886 -165.92511 98.711914" shapeId="49" castsShadows="true" receiveShadows="true" doubleSided="true" materialIds="13" clipDistance="25" nodeId="497"/>
+                            <Shape name="springOnion03_01" translation="7.510237 8.472954 -1.440597" rotation="261.423248 0.963276 -81.283089" shapeId="50" castsShadows="true" receiveShadows="true" doubleSided="true" materialIds="13" clipDistance="25" nodeId="498"/>
+                            <Shape name="springOnion03_02" translation="-0.217764 8.088447 -1.114009" rotation="262.658173 0.963052 90.02076" shapeId="50" castsShadows="true" receiveShadows="true" doubleSided="true" materialIds="13" clipDistance="25" nodeId="499"/>
+                            <Shape name="springOnion03_03" translation="-6.079452 -5.887712 -0.637389" rotation="261.653931 0.963268 90.003876" shapeId="50" castsShadows="true" receiveShadows="true" doubleSided="true" materialIds="13" clipDistance="25" nodeId="500"/>
+                            <Shape name="springOnion03_04" translation="-7.226613 -8.336437 -1.400926" rotation="261.423248 0.963276 90" shapeId="50" castsShadows="true" receiveShadows="true" doubleSided="true" materialIds="13" clipDistance="25" nodeId="501"/>
+                            <Shape name="springOnion03_05" translation="-7.226613 -8.896877 -1.400926" rotation="261.423248 0.963276 90" shapeId="50" castsShadows="true" receiveShadows="true" doubleSided="true" materialIds="13" clipDistance="25" nodeId="502"/>
+                        </TransformGroup>
+                        <Shape name="LOD1" translation="-0.00803 0.89991 -0.203375" shapeId="51" castsShadows="true" receiveShadows="true" materialIds="14" clipDistance="20" nodeId="503"/>
+                    </TransformGroup>
+                    <Shape name="fillplane_potato" translation="-0.014111 0.934166 -0.658653" shapeId="52" castsShadows="true" receiveShadows="true" materialIds="14" clipDistance="20" nodeId="504"/>
+                    <Shape name="fillplane_riceLongGrain" translation="0.239533 0.912831 -0.412363" shapeId="53" castsShadows="true" receiveShadows="true" materialIds="14" clipDistance="20" nodeId="505"/>
+                    <Shape name="fillplane_rice" translation="0.124229 0.877659 -0.417052" shapeId="54" castsShadows="true" receiveShadows="true" materialIds="14" clipDistance="20" nodeId="506"/>
+                    <Shape name="fillplane_chilli" translation="0.456075 1.070231 0.418714" shapeId="55" castsShadows="true" receiveShadows="true" materialIds="14" clipDistance="20" nodeId="507"/>
+                    <Shape name="fillplane_sugar" translation="0.006984 1.261424 -0.728194" shapeId="56" castsShadows="true" receiveShadows="true" materialIds="14" clipDistance="20" nodeId="508"/>
+                    <Shape name="fillplane_parsnip" translation="0.04004 0.855399 -0.485054" shapeId="57" castsShadows="true" receiveShadows="true" materialIds="14" clipDistance="20" nodeId="509"/>
+                    <Shape name="fillplane_spinach" translation="-0.008041 0.884438 -0.292829" shapeId="58" castsShadows="true" receiveShadows="true" materialIds="14" clipDistance="20" nodeId="510"/>
+                    <Shape name="fillplane_olive" translation="0.066702 0.920789 0.692089" shapeId="59" castsShadows="true" receiveShadows="true" materialIds="14" clipDistance="20" nodeId="511"/>
+                    <Shape name="fillplane_grape" translation="-0.225773 1.061401 0.068259" shapeId="60" castsShadows="true" receiveShadows="true" materialIds="14" clipDistance="20" nodeId="512"/>
+                    <Shape name="fillplane_carrot" translation="-0.080723 1.075656 0.467296" shapeId="61" castsShadows="true" receiveShadows="true" materialIds="14" clipDistance="20" nodeId="513"/>
+                    <Shape name="fillplane_garlic" translation="0.365189 1.182616 -0.056165" shapeId="62" castsShadows="true" receiveShadows="true" materialIds="14" clipDistance="20" nodeId="514"/>
+                    <Shape name="fillplane_tomato" translation="-0.021872 0.971567 2.490678" shapeId="63" castsShadows="true" receiveShadows="true" materialIds="14" clipDistance="20" nodeId="515"/>
+                    <Shape name="fillplane_strawberries" translation="0.040327 1.065134 0.004806" shapeId="64" castsShadows="true" receiveShadows="true" materialIds="14" clipDistance="20" nodeId="516"/>
+                    <Shape name="fillplane_oyster" translation="-0.087384 0.999375 -0.640495" shapeId="65" castsShadows="true" receiveShadows="true" materialIds="14" clipDistance="20" nodeId="517"/>
+                </TransformGroup>
+                <Shape name="frames" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="2,3" skinBindNodeIds="518 33 36 40 43 47 51 55 58 62 63 67 68" clipDistance="200" nodeId="518"/>
+                <Shape name="farmersMarketLogo" translation="-0.002023 4.772351 12.495124" shapeId="66" castsShadows="true" receiveShadows="true" materialIds="15" clipDistance="175" nodeId="519"/>
+            </TransformGroup>
+            <TransformGroup name="collisions" nodeId="520">
+                <Shape name="collision" shapeId="67" static="true" collisionFilterGroup="0x1034" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="521"/>
+                <Shape name="collision_interior" shapeId="68" static="true" collisionFilterGroup="0x1034" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="522"/>
+                <Shape name="tipCollision" shapeId="69" static="true" collisionFilterGroup="0x8" collisionFilterMask="0x1" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="523"/>
+            </TransformGroup>
+            <Shape name="occluder" translation="0 10.231696 0" shapeId="70" castsShadows="true" receiveShadows="true" nonRenderable="true" occluder="true" materialIds="1" nodeId="524"/>
+            <ReferenceNode name="uniaFarma200_1" translation="12 0 0" referenceId="1" nodeId="525"/>
+            <ReferenceNode name="uniaFarma200_2" translation="12 0 8" referenceId="1" nodeId="526"/>
+        </TransformGroup>
+    </Scene>
+    <UserAttributes/>
+</i3D>
